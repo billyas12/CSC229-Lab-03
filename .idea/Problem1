@@ -1,0 +1,30 @@
+Problem 1) Find and show how to compute Big O for the following algorithm: 70%
+
+public class NewClass {
+public static int getLargest (int arr[], int sz) {
+
+int iterate1 = 0; ......1
+int iterate2 = 0; ......1
+int largest = 0;  ......1
+while (iteratel1 < sz - 1) {..... (n+1)
+    iterate2++;..... +n
+
+    if (iterate2 = sz) { ....2n
+    iterate1++; ....n
+    iterate2 = iterate1; ....1
+    continue; ....1
+    }
+    int product = arr[iterate1] * arr[iterate2]; ....1
+    if (product > largest ) ....1
+        largest = product; ....1
+}
+return largest; ....1
+｝
+｝
+
+1 + 1 + 1 + (n+1) + n * 2n + n + 1 + 1 + 1 + 1 + 1
+3 + (n+1) + 2n^2 + n + 5
+3n + 3 + 2n^2 + n + 5
+2n^2 + 4n + 8 (ignore 4n + 8)
+2n^2/n^2
+O(n^2) (Big O is n^2)
